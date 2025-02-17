@@ -1,11 +1,12 @@
 ﻿@{
     ViewData["Title"] = "Room Reservation";
+	Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
 <div class="container">
     <div class="form-box">
         <h3>Cadastre-se</h3>
-        <form method="post" action="/User/SingUp">
+        <form method="post" action="/User/SingUp" class="inputs-form">
             <input type="text" name="name" placeholder="Nome" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="tel" name="phoneNumber" placeholder="Telefone" required>
@@ -14,56 +15,6 @@
     </div>
 </div>
 
-<style>
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .form-box {
-        width: auto;
-        height: auto;
-        background: white;
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        border-radius: 10px;
-        padding: 20px;
-        background: #ebe0e0;
-        
-    }
-
-    form {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
-    input {
-        margin: 10px 0;
-        padding: 10px;
-        border: 1px solid #ccc;
-        border-radius: 5px;
-        width: 100%;
-    }
-
-    button {
-        margin-top: 10px;
-        padding: 10px;
-        background: #0d2f53;
-        color: white;
-        border: none;
-        border-radius: 5px;
-        cursor: pointer;
-    }
-
-    button:hover {
-        background: #0056b3;
-    }
-</style>
 
 @section Scripts {
     <script>

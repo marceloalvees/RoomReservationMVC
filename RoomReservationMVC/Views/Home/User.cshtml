@@ -1,0 +1,56 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewData["Title"] = "Room Reservation";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<table class="table table-hover">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Sala</th>
+            <th scope="col">Data</th>
+            <th scope="col">Capacidade</th>
+            <th scope="col">Status</th>
+            <th scope="col"></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var reservation in ViewBag.Reservations)
+        {
+            <tr>
+                <th scope="row">@reservation.id</th>
+                <th>@reservation.roomName</th>
+                <th>@reservation.date</th>
+                <th>@reservation.capacity</th>
+                @if (reservation.status != EReservationStatus.Canceled)
+                {
+                    <th>Confirmado</th>
+                    <th>
+                            <form action="/Reservation/Put" method="post">
+                                <input type="hidden" name="ReservationId" value="@reservation.id" />
+                                <input type="hidden" name="Date" value="@reservation.date" />
+                                <button type="submit" class="btn btn-danger">Cancelar</button>
+                            </form>
+                    </th>
+                }
+                else {
+                <th>Cancelado</th>
+                    <th>
+                        <form action="/Reservation/Put" method="post">
+                            <input type="hidden" name="ReservationId" value="@reservation.id" />
+                            <input type="hidden" name="Date" value="@reservation.date" />
+                            <button type="submit"  disabled class="btn btn-danger">Cancelar</button>
+                        </form>
+                    </th>
+                }
+            </tr>
+        }
+        
+    </tbody>
+</table>
+<a href="@Url.Action("Reservation", "Home")">
+    <button type="button">Realizar uma nova reserva</button>
+</a>

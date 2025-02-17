@@ -20,6 +20,7 @@ namespace RoomReservationMVC.Controllers
             return View();
         }
 
+
         [HttpPost]
         public async Task<IActionResult> SingUp(UserModel user)
         {
@@ -37,7 +38,8 @@ namespace RoomReservationMVC.Controllers
 
             if (messageResponse.success)
             {
-                return RedirectToAction("Reservation");
+                TempData["email"] = user.Email;
+                return RedirectToAction("Reservation", "Home");
             }
             else
             {

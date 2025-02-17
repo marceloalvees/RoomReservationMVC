@@ -2,9 +2,9 @@
 {
     public class RoomModel
     {
-        public int Id { get; set; }
-        public required string Name { get; set; }
-        public int Capacity { get; set; }
-        public required string Location { get; set; }
+        public int id { get; set; }
+        public required string name { get; set; }
+        public int capacity { get; set; }
+        public required string location { get; set; }
     }
 }

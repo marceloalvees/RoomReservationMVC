@@ -227,3 +227,4 @@ C:\Users\TGT\Projetos\RoomReservationMVC\RoomReservationMVC\bin\Debug\net8.0\run
 C:\Users\TGT\Projetos\RoomReservationMVC\RoomReservationMVC\bin\Debug\net8.0\runtimes\win\lib\net7.0\System.Windows.Extensions.dll
 C:\Users\TGT\Projetos\RoomReservationMVC\RoomReservationMVC\obj\Debug\net8.0\RoomReservationMVC.csproj.AssemblyReference.cache
 C:\Users\TGT\Projetos\RoomReservationMVC\RoomReservationMVC\obj\Debug\net8.0\RoomRese.E0F06689.Up2Date
+C:\Users\TGT\Projetos\RoomReservationMVC\RoomReservationMVC\obj\Debug\net8.0\RoomReservationMVC.sourcelink.json
